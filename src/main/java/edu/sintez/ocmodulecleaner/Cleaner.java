@@ -1,3 +1,5 @@
+package edu.sintez.ocmodulecleaner;
+
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
@@ -125,7 +127,7 @@ public class Cleaner {
 
 		jtpConsole.setTransferHandler(new TransferHandler(){
 			@Override
-			public boolean canImport(TransferHandler.TransferSupport support) {
+			public boolean canImport(TransferSupport support) {
 				if (!support.isDataFlavorSupported(DataFlavor.javaFileListFlavor)) {
 					return false;
 				}
@@ -138,7 +140,7 @@ public class Cleaner {
 			}
 
 			@Override
-			public boolean importData(TransferHandler.TransferSupport support) {
+			public boolean importData(TransferSupport support) {
 				if (!canImport(support)) {
 					return false;
 				}
@@ -342,8 +344,8 @@ public class Cleaner {
 
 	/**
 	 * Возможные варианты дейсвия для вывода информации в инф. окне
-	 * {@link Cleaner.ViewInformActions#NEW} - все предыдущие записи стираються
-	 * {@link Cleaner.ViewInformActions#ADD} - добавление к существующему тексту нового текста
+	 * {@link ViewInformActions#NEW} - все предыдущие записи стираються
+	 * {@link ViewInformActions#ADD} - добавление к существующему тексту нового текста
 	 */
 	private enum ViewInformActions {
 		ADD,
