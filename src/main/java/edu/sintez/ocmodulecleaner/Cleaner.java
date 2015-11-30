@@ -16,7 +16,7 @@ import java.util.List;
 
 public class Cleaner {
 
-	public static final String TITLE_APP = "OC module cleaner";
+	public static final String TITLE_APP = "OC module cleaner v1.0";
 	public static final String ADMIN_DIR = "admin";
 	public static final String CATALOG_DIR = "catalog";
 	public static final String BLANK = "";
@@ -68,7 +68,6 @@ public class Cleaner {
 		jtfOCPath = new JTextField();
 		jtfOCPath.setPreferredSize(new Dimension());
 		jtfOCPath.setToolTipText(MSG_JTF_OC_PATH);
-		jtfOCPath.setText("/home/max/pcshopoc156-copy");
 
 		btnOCPathChooser = new JButton(BTN_OC_PATH_CHOOSER);
 		btnRemoveModule = new JButton(BTN_RM_MODULE);
